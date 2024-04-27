@@ -2,14 +2,13 @@ import React from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Col, Container, Row } from 'react-bootstrap';
-import hundred from "../assets/img/hundred.svg";
 import Github2 from "../assets/img/Github2.svg";
 import Figma from "../assets/img/Figma.svg";
-import Css from "../assets/img/Css.svg";
+import Css from "../assets/img/CSS3.png";
 import django from "../assets/img/django.svg";
 import firebase from "../assets/img/firebase.svg";
-import Html from "../assets/img/Html.svg";
-import Javascript from "../assets/img/Javascript.svg";
+import Html from "../assets/img/html5.png";
+import Javascript from "../assets/img/js.jpeg";
 import Reactjs from "../assets/img/Reactjs.svg";
 import colorSharp from "../assets/img/color-sharp.png";
 
@@ -46,15 +45,6 @@ const Skills = () => {
                     <h2>Skills</h2>
                     <p>Here are the skills I have learned and still learning</p>
                     <Carousel responsive={responsive} infinite={true} className='skill-slider'>
-                        <div className='item'>
-                            <img src={hundred} alt=''/>
-                            <h5>Fast Learner</h5>
-                        </div>
-
-                        <div className='item'>
-                            <img src={hundred} alt=''/>
-                            <h5>Easily Adapt</h5>
-                        </div>
 
                         <div className='item'>
                             <img src={Html} alt=''/>
@@ -76,10 +66,6 @@ const Skills = () => {
                             <h5>React.js</h5>
                         </div>
 
-                        <div className='item'>
-                            <img src={Reactjs} alt=''/>
-                            <h5>React Native</h5>
-                        </div>
 
                         <div className='item'>
                             <img src={django} alt=''/>

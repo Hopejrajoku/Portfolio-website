@@ -9,7 +9,7 @@ import TrackVisibility from 'react-on-screen';
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = [ "Fullstack Web Developer", "UX/UI Designer", "Mobile App Dev", "Web3 Enthusiast"];
+  const toRotate = [ "Frontend Developer", "Fullstack Web Developer", "UX/UI Designer", "Web3 Enthusiast"];
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
@@ -20,7 +20,8 @@ const Banner = () => {
       tick();
     }, delta)
     return() => {clearInterval(ticker)} 
-  }, [text])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [text]);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -51,10 +52,11 @@ const Banner = () => {
                 <Col xs={12} md={6} xl={7}>
                   <TrackVisibility>
                   {({ isVisible }) =>
+                  
                   <div classsName={isVisible ? "animate__animated animate__fadeIn" : ""}>
                     <span className='tagline'>Thank You For Your Time</span>
                     <h1 style={{ color: '#f5f5f4'}}>{`Hi! I'm Hope Jr, a`}<span className='wrap'></span> {text}</h1>
-                    <p>Welcome to my Portfolio website, I'm a self taught Junior Fullstack Web Developer with a solid background in UI/UX design, with over 1 year experience as a developer, I live in Nigeria for now and I am open to jobs, internship roles and freelancing gigs. </p>
+                    <p>Welcome to my Portfolio website, I am Hope jr a web Developer, I bring expertise in web development with solid background in UI/UX design. With a passion for clean, efficient code and a knack for problem solving, I thrive in collaborative environments. Committed to delivering exceptional user experience and expanding my skill to meet evolving industry demands. </p>
                     <button onClick={() => console.log('connect')}>Get intouch <ArrowRightCircle size={25} /></button>
                   </div>
                   }
