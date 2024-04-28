@@ -39,6 +39,22 @@ const Projects = () => {
                 <Tab.Content>
                     <Tab.Pane eventKey="first">
                         <Row className='Poject-row'>
+
+
+                        <Col sm={6} md={4}>
+                            <div className='proj-cardd'>
+                            <img src={Care} alt='' style={{ marginTop: 40}} />
+                            <div className='proj-cardd-txt'>
+                            <h4 className='title mt-3'>Carechain</h4>
+                            <p>This is a Biomedic blockchain project, designed to improve lives with the help of blockchain tech and AI. Built with React.js</p>
+                            </div>
+                            <div className='proj-cardd-btn' style={{ marginTop: 10}} >
+                            <a href='https://carechain.vercel.app/' className='proj-button'>View Project</a>
+                            </div>
+                            </div>
+                            </Col>
+
+
                             <Col sm={6} md={4}>
                             <div className='proj-cardd'>
                             <img src={coincept1} alt='' style={{ marginTop: 40}} />
@@ -52,18 +68,7 @@ const Projects = () => {
                             </div>
                             </Col>
 
-                            <Col sm={6} md={4}>
-                            <div className='proj-cardd'>
-                            <img src={Care} alt='' style={{ marginTop: 40}} />
-                            <div className='proj-cardd-txt'>
-                            <h4 className='title mt-3'>Carechain</h4>
-                            <p>This is a Biomedic blockchain project, designed to improve lives with the help of blockchain tech and AI. Built with React.js</p>
-                            </div>
-                            <div className='proj-cardd-btn' style={{ marginTop: 10}} >
-                            <a href='https://carechaiin.netlify.app/' className='proj-button'>View Project</a>
-                            </div>
-                            </div>
-                            </Col>
+                            
 
                             <Col sm={6} md={4}>
                             <div className='proj-cardd'>
