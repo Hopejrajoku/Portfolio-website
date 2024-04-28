@@ -39,14 +39,14 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   line-height: normal;
 }
 
 p, a, li, button, ul {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   line-height: normal;
   text-decoration: none;
 }
@@ -61,7 +61,7 @@ img {
 }
 
 button {
-  border: 0;
+  border: 0px;
   background-color: transparent;
 }
 
@@ -72,7 +72,7 @@ input:focus, textarea:focus, select:focus {
 @media (min-width:1700px) {
 	main .container {
 		max-width: 100%;
-		padding: 0 150px;
+		padding: 0px 150px;
 	}
 }
 
@@ -85,10 +85,10 @@ p.danger {
 }
 /************ Navbar Css ************/
 nav.navbar {
-  padding: 18px 0;
+  padding: 18px 0px;
   position: fixed;
   width: 100%;
-  top: 0;
+  top: 0px;
   z-index: 9999;
   transition:  0.32s ease-in-out;
 }
@@ -103,7 +103,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color:  #f5f5f4 !important;
   letter-spacing: 0.8px;
-  padding: 0 25px;
+  padding: 0px 25px;
   font-size: 18px;
   font-weight: bold;
   opacity: 0.75;
@@ -134,7 +134,7 @@ span.navbar-text {
     margin-right: 6px;
     align-items: center;
     justify-content: center;
-    line-height: 1;
+    line-height: 1px;
     border: 1px solid #f5f5f4;
 }
 .social-icon a::before {
@@ -242,8 +242,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Banner Css ************/
 .banner {
-  margin-top: 0;
-  padding: 260px 0 100px 0;
+  margin-top: 0px;
+  padding: 260px 0px 100px 0px;
   background-image: url('./assets/img/night1.svg');
   background-position: top center;
   background-size: cover;
@@ -316,7 +316,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Skills Css ************/
 .skill {
-  padding: 0 0 50px 0;
+  padding: 0px 0px 50px 0px;
   position: relative;
 }
 .skill-bx {
@@ -335,28 +335,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5rem;
-    margin: 14px 0 75px 0;
+    margin: 14px 0px 75px 0px;
 }
 .skill-slider {
   width: 80%;
-  margin: 0 auto;
+  margin: 0px auto;
   position: relative;
 }
 .skill-slider .item img {
   width: 50%;
-  margin: 0 auto 15px auto;
+  margin: 0px auto 15px auto;
 }
 .background-image-left {
   top: 28%;
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   width: 40%;
   z-index: -4;
 }
 
 /************ Projects Css ************/
 .project {
-  padding: 80px 0;
+  padding: 80px 0px;
   position: relative;
   background-color: black;
 }
@@ -378,7 +378,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .project .nav.nav-pills {
   width: 40%;
-  margin: 0 auto;
+  margin: 0px auto;
   border-radius: 50px;
   background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
@@ -389,8 +389,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
-  border-radius: 0;
-  padding: 20px 0;
+  border-radius: 0px;
+  padding: 20px 0px;
   color: #fff;
   width: 100%;
   font-size: 17px;
@@ -404,7 +404,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project .nav.nav-pills .nav-link::before {
     content: "";
     position: absolute;
-    width: 0;
+    width: 0px;
     height: 100%;
     background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
     top: 0;
@@ -453,7 +453,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .proj-cardd-btn a{
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 0;
+  border-radius: 0px;
   text-align: center;
   text-decoration: none;
   font-weight: 400;
@@ -478,9 +478,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .background-image-right {
   top: 20%;
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   width: 35%;
-  right: 0;
+  right: 0px;
   z-index: -4;
 }
 
@@ -502,7 +502,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
   color: #fff;
-  margin: 0 0 8px 0;
+  margin: 0px 0px 8px 0px;
   padding: 18px 26px;
   font-weight: 500;
   font-size: 18px;
@@ -529,7 +529,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 14px 48px;
   font-size: 18px;
   margin-top: 25px;
-  border-radius: 0;
+  border-radius: 0px;
   position: relative;
   transition: 0.3s ease-in-out;
 }
@@ -543,7 +543,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact form button::before {
   content: "";
   background: #121212;
-  width: 0;
+  width: 0px;
   height: 100%;
   position: absolute;
   top: 0;
@@ -559,7 +559,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 50px 0;
+  padding: 0px 0px 50px 0px;
   background-image: url('./assets/img/footer-bg.png');
   background-position: center center;
   background-size: cover;
@@ -614,8 +614,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #121212;
   font-weight: 500;
   background: transparent;
-  border: 0;
-  padding: 0 15px;
+  border: 0px;
+  padding: 0px 15px;
 }
 .new-email-bx button {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
