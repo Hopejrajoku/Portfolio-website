@@ -9,60 +9,60 @@ import emailjs from '@emailjs/browser';
 
 export const Contact = () => {
 
-  const formInitialDetails = {
-    name: '',
-    email: '',
-    message: ''
-  }
+  const formRef = useRef();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const [formDetails, setFormDetails] = useState("");
-  const [buttonText, setButtonText] = useState('Send');
-  const [status, setStatus] = useState({});
+  const [loading, setLoading] = useState(false);
 
-  const onFormUpdate = (category, value) => {
-      setFormDetails({
-        ...formDetails,
-        [category]: value
-      })
-  }
+  const handleChange = (e) => {
+    const { target } = e;
+    const { name, value } = target;
 
-  
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
 
-
-  const form = useRef();
-
-  const sendEmail = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
-      .sendForm('service_s87a9lr', 'template_o02090s', form.current, {
-        publicKey: 'IzR_EscdF3Yq_7QY_',
-      })
+      .send(
+        'service_s87a9lr',
+        'template_o02090s',
+        {
+          from_name: form.name,
+          to_name: "Hope Jr Ajoku",
+          from_email: form.email,
+          to_email: "hajoku0@gmail.com",
+          message: form.message,
+        },
+        'IzR_EscdF3Yq_7QY_'
+      )
       .then(
         () => {
-          console.log('SUCCESS!');
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible.");
+
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
         },
         (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
+          setLoading(false);
+          console.error(error);
 
-      setButtonText("Sending...");
-      let response = await fetch("http://localhost:3000/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json;charset=utf-8",
-        },
-        body: JSON.stringify(formDetails),
-      });
-      setButtonText("Send");
-      let result = await response.json();
-      setFormDetails(formInitialDetails);
-      if (result.code === 200) {
-        setStatus({ succes: true, message: 'Message sent successfully'});
-      } else {
-        setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
-      }
+          alert("Ahh, something went wrong. Please try again.");
+        }
+      );
   };
 
   return (
@@ -82,27 +82,37 @@ export const Contact = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <h2>Contact Me</h2>
-          <form ref={form} onSubmit={sendEmail}>
 
+          <form ref={formRef} 
+          onSubmit={handleSubmit}>
           <Row>
              <Col size={12} sm={6} className="px-1">
-               <input type="text" value={formDetails.firstName} placeholder="Name" name="from_name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
+               <input type="text" 
+               value={form.name} 
+               placeholder="Enter Name" 
+               name="name" onChange={handleChange} />
              </Col>
           
              <Col size={12} sm={6} className="px-1">
-               <input type="email" value={formDetails.email} placeholder="Email Address" name="from_email" onChange={(e) => onFormUpdate('email', e.target.value)} />
+               <input type="email" 
+               value={form.email} 
+               placeholder="Enter Email Address" 
+               name="email" 
+               onChange={handleChange} />
              </Col>
              
              <Col size={12} className="px-1">
-               <textarea rows="6" value={formDetails.message} placeholder="Message" name="message" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
-               <button type="submit" ><span>{buttonText}</span></button>
+               <textarea rows="6" 
+               value={form.message} 
+               placeholder="Enter Your Message" name="message" 
+               onChange={handleChange}></textarea>
+               <button 
+               type="submit" >
+                <span>
+                  {loading ? "Sending..." : "Send"}
+                </span>
+               </button>
              </Col>
-             {
-               status.message &&
-               <Col>
-                 <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
-               </Col>
-             }
           </Row>
           </form>
           </div>}
