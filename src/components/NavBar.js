@@ -4,6 +4,7 @@ import X from "../assets/img/X.svg";
 import GitHub from "../assets/img/GitHub.svg";
 import LinkedIn from "../assets/img/LinkedIn.svg";
 import Logo from '../assets/img/logo-white.png'
+import resume from '../assets/img/resume.pdf'
 
 
 
@@ -11,6 +12,7 @@ import Logo from '../assets/img/logo-white.png'
 const NavBar = () => {
     const [activeLink, setAtiveLink] = useState('home');
     const  [scrolled, setScrolled] = useState(false);
+     
 
     useEffect(() =>{
         const onScroll = () =>{
@@ -45,7 +47,7 @@ const NavBar = () => {
             <Nav.Link href="#home" className={activeLink === 'home' ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink('home')}>About</Nav.Link>
             <Nav.Link href="#skills" className={activeLink === 'skills' ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
             <Nav.Link href="#projects" className={activeLink === 'projects' ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
-            <Nav.Link href="#contact" className={activeLink === 'contact' ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink('contact')}>Contact-Me</Nav.Link>
+            <Nav.Link href="#contact" className={activeLink === 'contact' ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink('contact')}>Contact</Nav.Link>
           </Nav>
           <span className='navbar-text'>
             <div className='social-icon'>
@@ -53,7 +55,7 @@ const NavBar = () => {
                 <a href='https://github.com/Hopejrajoku'><img src={GitHub} alt=''/></a>
                 <a href='https://www.linkedin.com/in/hope-ajoku-112599273/'><img src={LinkedIn} alt=''/></a>
             </div>
-            <button className='vvd' onClick={() => console.log('contact')}><span>My Résumé</span></button>
+            <a className='vvd' href={resume} download='resume'><span>Résumé</span></a>
           </span>
         </Navbar.Collapse>
       </Container> 

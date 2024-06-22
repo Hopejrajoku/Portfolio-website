@@ -55,12 +55,7 @@ const Banner = () => {
                   <div classsName={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 
                     <h1 style={{ color: '#f5f5f4'}}>{`Hi! I'm Hope Jr, a`}<span className='wrap'></span> {text}</h1>
-                    <p>I am a passionate Frontend Developer with a knack for creating visually stunning and functional web applications. Skilled in HTML, CSS, JavaScript, and frameworks like React, I excel in building responsive, user-friendly interfaces.
-
-                     My expertise ensures optimal performance and accessibility by leveraging the latest frontend technologies. I thrive in collaborative environments, contributing to both design and technical aspects to exceed user expectations.
-                     
-                     With a keen eye for design and attention to detail, I am dedicated to continuous learning and staying current with web development trends. My goal is to blend creativity and technical skills to deliver exceptional value to users and stakeholders.
-                     </p>
+                    <p>I am a dedicated Frontend Developer specializing in crafting visually captivating and functional web applications. Proficient in HTML, CSS, JavaScript, and React, I specialize in creating responsive, intuitive interfaces. With a passion for design and a commitment to innovation, I aim to exceed user expectations through collaborative, cutting-edge solutions.</p>
                     
                   </div>
                   }
