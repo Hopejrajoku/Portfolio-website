@@ -94,7 +94,7 @@ nav.navbar {
 }
 nav.navbar.scrolled {
   padding: 0px 0px;
-  background-color: #121212;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
 }
 nav.navbar a.navbar-brand {
     width: 9%;
@@ -244,22 +244,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0px;
   padding: 260px 0px 100px 0px;
-  background-image: url('./assets/img/night1.svg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.banner .tagline {
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(78, 45, 168, 0.5) -5.91%, rgba(47, 156, 189, 0.5) 111.58%);
-  border: 1px solid #f5f5f4;
-  font-size: 20px;
-  margin-bottom: 16px;
-  display: inline-block;
-  color: #f5f5f4;
-}
+
 .banner h1 {
   font-size: 65px;
   font-weight: 700;
@@ -267,16 +256,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1;
   margin-bottom: 20px;
   display: block;
-
+  text-align: left;
 }
 .banner p {
   color: #f5f5f4;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
-  width: 96%;
-  font-weight: bold !important;
-
+  text-align: left;
+  padding-bottom: 10px;
 }
 .banner button {
   color: #f5f5f4;
@@ -634,6 +622,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+
+.star{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
 }
 
 

@@ -1,15 +1,14 @@
 import { useEffect, useState}  from 'react';
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import headerImg from '../assets/img/header-img.svg';
-import { ArrowRightCircle } from 'react-bootstrap-icons';
+import Loo from '../assets/img/Loo.jpg';
 import "animate.css";
 import TrackVisibility from 'react-on-screen';
 
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = [ "Frontend Developer", "Fullstack Web Developer", "UX/UI Designer", "Web3 Enthusiast"];
+  const toRotate = [ "Frontend Developer", "UX/UI Designer", "Web3 Enthusiast" ];
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
@@ -54,16 +53,21 @@ const Banner = () => {
                   {({ isVisible }) =>
                   
                   <div classsName={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                    <span className='tagline'>Thank You For Your Time</span>
+                
                     <h1 style={{ color: '#f5f5f4'}}>{`Hi! I'm Hope Jr, a`}<span className='wrap'></span> {text}</h1>
-                    <p>Welcome to my Portfolio website, I am Hope jr a web Developer, I bring expertise in web development with solid background in UI/UX design. With a passion for clean, efficient code and a knack for problem solving, I thrive in collaborative environments. Committed to delivering exceptional user experience and expanding my skill to meet evolving industry demands. </p>
-                    <button onClick={() => console.log('connect')}>Get intouch <ArrowRightCircle size={25} /></button>
+                    <p>I am a passionate Frontend Developer with a knack for creating visually stunning and functional web applications. Skilled in HTML, CSS, JavaScript, and frameworks like React, I excel in building responsive, user-friendly interfaces.
+
+                     My expertise ensures optimal performance and accessibility by leveraging the latest frontend technologies. I thrive in collaborative environments, contributing to both design and technical aspects to exceed user expectations.
+                     
+                     With a keen eye for design and attention to detail, I am dedicated to continuous learning and staying current with web development trends. My goal is to blend creativity and technical skills to deliver exceptional value to users and stakeholders.
+                     </p>
+                    
                   </div>
                   }
                   </TrackVisibility>
                 </Col>
                 <Col xs={12} md={6} xl={5}>
-                    <img src={headerImg} alt='' />
+                    <img src={Loo} alt='' style={{borderRadius:'50%'}}/>
                 </Col>
             </Row>
         </Container>

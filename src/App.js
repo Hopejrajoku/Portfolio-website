@@ -6,6 +6,7 @@ import Banner from './components/Banner';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import {Footer} from './components/Footer';
+import Stars from './components/canvas/Stars'
 import { Contact } from './components/Contact';
 
 
@@ -14,7 +15,12 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Banner />
+      <div className="">
+        <Stars />
+        <div>
+        <Banner />
+        </div>
+      </div>
       <Skills />
       <Projects />
       <Contact />

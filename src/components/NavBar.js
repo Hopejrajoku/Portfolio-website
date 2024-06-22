@@ -3,6 +3,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap'
 import X from "../assets/img/X.svg";
 import GitHub from "../assets/img/GitHub.svg";
 import LinkedIn from "../assets/img/LinkedIn.svg";
+import Logo from '../assets/img/logo-white.png'
 
 
 
@@ -33,14 +34,15 @@ const NavBar = () => {
       <Container>
         
         <Navbar.Brand className='hope' href="#home">
-            Hope-jr
+          <img src={Logo} style={{height:40, width: 40, borderRadius:'50%'}} alt='logo'/>
+    
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className='navbar-toggler-icon'></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home" className={activeLink === 'home' ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink('home')}>About-Me</Nav.Link>
+            <Nav.Link href="#home" className={activeLink === 'home' ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink('home')}>About</Nav.Link>
             <Nav.Link href="#skills" className={activeLink === 'skills' ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
             <Nav.Link href="#projects" className={activeLink === 'projects' ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
             <Nav.Link href="#contact" className={activeLink === 'contact' ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink('contact')}>Contact-Me</Nav.Link>
@@ -51,7 +53,7 @@ const NavBar = () => {
                 <a href='https://github.com/Hopejrajoku'><img src={GitHub} alt=''/></a>
                 <a href='https://www.linkedin.com/in/hope-ajoku-112599273/'><img src={LinkedIn} alt=''/></a>
             </div>
-            <button className='vvd' onClick={() => console.log('contact')}><span>Let's Connect</span></button>
+            <button className='vvd' onClick={() => console.log('contact')}><span>My Résumé</span></button>
           </span>
         </Navbar.Collapse>
       </Container> 
