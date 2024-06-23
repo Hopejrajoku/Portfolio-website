@@ -51,9 +51,9 @@ const NavBar = () => {
           </Nav>
           <span className='navbar-text'>
             <div className='social-icon'>
-                <a href='https://twitter.com/B_ksnightmare'><img src={X} alt=''/></a>
-                <a href='https://github.com/Hopejrajoku'><img src={GitHub} alt=''/></a>
-                <a href='https://www.linkedin.com/in/hope-ajoku-112599273/'><img src={LinkedIn} alt=''/></a>
+                <a href='https://twitter.com/B_ksnightmare'><img src={X} target="_blank" alt=''/></a>
+                <a href='https://github.com/Hopejrajoku'><img src={GitHub} target="_blank" alt=''/></a>
+                <a href='https://www.linkedin.com/in/hope-ajoku-112599273/'><img src={LinkedIn} target="_blank" alt=''/></a>
             </div>
             <a className='vvd' href={resume} download='resume'><span>My Résumé</span></a>
           </span>
