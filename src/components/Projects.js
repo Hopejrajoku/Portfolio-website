@@ -49,7 +49,7 @@ const Projects = () => {
                             <p>This is a Biomedic blockchain project, designed to improve lives with the help of blockchain tech and AI. Built with React.js</p>
                             </div>
                             <div className='proj-cardd-btn' style={{ marginTop: 10}} >
-                            <a href='https://carechain.vercel.app/' className='proj-button'>View Project</a>
+                            <a href='https://carechain.vercel.app/' target="_blank" rel="noopener noreferrer" className='proj-button'>View Project</a>
                             </div>
                             </div>
                             </Col>
@@ -63,7 +63,7 @@ const Projects = () => {
                             <p>This is a very simple, easy to use Cryptocurrency price tracker app, built with React, ContextAPI, MaterialUI,Firebase and ChartJS</p>
                             </div>
                             <div className='proj-cardd-btn' style={{ marginTop: 10}}>
-                            <a href='https://coincept.netlify.app/' className='proj-button' role='button'>View Project</a>
+                            <a href='https://coincept.netlify.app/' target="_blank" rel="noopener noreferrer" className='proj-button' role='button'>View Project</a>
                             </div>
                             </div>
                             </Col>
