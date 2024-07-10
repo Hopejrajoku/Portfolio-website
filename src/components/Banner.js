@@ -4,6 +4,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Loo from '../assets/img/Loo.jpg';
 import "animate.css";
 import TrackVisibility from 'react-on-screen';
+import { Helmet } from 'react-helmet-async';
 
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -42,7 +43,12 @@ const Banner = () => {
       setDelta(500);
     }
   }
-  return (
+  return <>
+    <Helmet>
+     <title>Hopejr</title>
+     <meta name='description' content='Hopejr Portfolio Website' />
+     <link rel='canonical' href='/home' />
+    </Helmet>
     <section className='banner' id='home'>
        <div classsName="overlay">
         
@@ -69,7 +75,7 @@ const Banner = () => {
         </div>
         
     </section>
-  )
+  </>
 }
 
 export default Banner
