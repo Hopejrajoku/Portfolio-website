@@ -51,7 +51,7 @@ const NavBar = () => {
           </Nav>
           <span className='navbar-text'>
             <div className='social-icon'>
-                <a href='https://twitter.com/B_ksnightmare' target="_blank" rel="noopener noreferrer"><img src={X} alt=''/></a>
+                <a href='https://x.com/Hopejrajoku' target="_blank" rel="noopener noreferrer"><img src={X} alt=''/></a>
                 <a href='https://github.com/Hopejrajoku' target="_blank" rel="noopener noreferrer"><img src={GitHub} alt=''/></a>
                 <a href='https://www.linkedin.com/in/hope-ajoku-112599273/' target="_blank" rel="noopener noreferrer"><img src={LinkedIn} alt=''/></a>
             </div>
