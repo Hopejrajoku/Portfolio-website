@@ -3,8 +3,8 @@ import { Col, Container, Row, Tab , Nav} from 'react-bootstrap';
 //import ProjectCard from './ProjectCard';
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import Care from '../assets/img/carechain.jpeg'
-import coincept1 from "../assets/img/coincept1.svg";
-import comm from "../assets/img/comm.svg";
+import coincept1 from "../assets/img/coincep.jpeg";
+import comm from "../assets/img/Web.jpeg";
 import TrackVisibility from 'react-on-screen';
 
 
@@ -41,15 +41,17 @@ const Projects = () => {
                         <Row className='Poject-row'>
 
 
-                        <Col sm={6} md={4}>
+                        <Col sm={6} md={4} className='project-cont'>
                             <div className='proj-cardd'>
-                            <img src={Care} alt='' style={{ marginTop: 40}} />
+                            <img src={Care} alt='' style={{ marginTop: 40, height: "230px"}} />
                             <div className='proj-cardd-txt'>
-                            <h4 className='title mt-3'>Carechain</h4>
+                            <h4 className='title'>Carechain</h4>
                             <p>This is a Biomedic blockchain project, designed to improve lives with the help of blockchain tech and AI. Built with React.js</p>
                             </div>
-                            <div className='proj-cardd-btn' style={{ marginTop: 10}} >
-                            <a href='https://carechain.vercel.app/' target="_blank" rel="noopener noreferrer" className='proj-button'>View Project</a>
+                            <div className='proj-cardd-btn'  >
+                            <div style={{display: "flex", justifyContent: "center"}}>
+                              <a href='https://carechain.vercel.app/' target="_blank" rel="noopener noreferrer" className='proj-button'>View Project</a>
+                            </div>
                             </div>
                             </div>
                             </Col>
@@ -57,28 +59,34 @@ const Projects = () => {
 
                             <Col sm={6} md={4}>
                             <div className='proj-cardd'>
-                            <img src={coincept1} alt='' style={{ marginTop: 40}} />
+                            <img src={coincept1} alt='' style={{ marginTop: 40, height: "230px"}} />
                             <div className='proj-cardd-txt'>
-                            <h4 className='title mt-3'>Crypto Price app</h4>
+                            <h4 className='title'>Crypto Price app</h4>
                             <p>This is a very simple, easy to use Cryptocurrency price tracker app, built with React, ContextAPI, MaterialUI,Firebase and ChartJS</p>
                             </div>
-                            <div className='proj-cardd-btn' style={{ marginTop: 10}}>
+                            <div className='proj-cardd-btn'>
+                            <div style={{display: "flex", justifyContent: "center"}}>
                             <a href='https://coincept.netlify.app/' target="_blank" rel="noopener noreferrer" className='proj-button' role='button'>View Project</a>
+                            </div>
                             </div>
                             </div>
                             </Col>
 
                             
 
-                            <Col sm={6} md={4}>
+                            <Col sm={6} md={4} className='project-cont'>
                             <div className='proj-cardd'>
-                            <img src={comm} alt='' style={{ marginTop: 40}} />
+                            <img src={comm} alt='' style={{ marginTop: 40, height: "230px"}} />
                             <div className='proj-cardd-txt'>
-                            <h4 className='title mt-3'>Coming Soon</h4>
-                            <p>This project will be available once completed and promised to be worth the time and effort, enjoying the buiding process</p>
+                            <h4 className='title'>CareerelpAI</h4>
+                            <div >
+                            <p>This project is an app that lets you participate in mock interview quizes, generate CV like a pro with the help of AI and many more.</p>
                             </div>
-                            <div className='proj-cardd-btn' style={{ marginTop: 10}}>
-                            <a href='##' className='proj-button'>Coming Soon</a>
+                            </div>
+                            <div className='proj-cardd-btn'>
+                            <div style={{display: "flex", justifyContent: "center"}}>
+                            <a href='https://careerhelpai.vercel.app/' className='proj-button'>View Project</a>
+                            </div>
                             </div>
                             </div>
                             </Col>

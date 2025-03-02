@@ -34,8 +34,8 @@ export const Contact = () => {
 
     emailjs
       .send(
-        'service_s87a9lr',
-        'template_o02090s',
+        'service_51ovs0k',
+        'template_eow5exq',
         {
           from_name: form.name,
           to_name: "Hope Jr Ajoku",
@@ -43,7 +43,7 @@ export const Contact = () => {
           to_email: "hajoku0@gmail.com",
           message: form.message,
         },
-        'IzR_EscdF3Yq_7QY_'
+        'E1a1xweM4CMozEK_N'
       )
       .then(
         () => {
@@ -123,10 +123,3 @@ export const Contact = () => {
     </section>
   );
 };
-
-
-
-
-
-
-

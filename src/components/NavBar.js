@@ -4,7 +4,7 @@ import X from "../assets/img/X.svg";
 import GitHub from "../assets/img/GitHub.svg";
 import LinkedIn from "../assets/img/LinkedIn.svg";
 import Logo from '../assets/img/logo-white.png'
-import resume from '../assets/img/resume.pdf'
+import Hopejr_resume from '../assets/img/Hopejr_resume.pdf'
 
 
 
@@ -36,7 +36,7 @@ const NavBar = () => {
       <Container>
         
         <Navbar.Brand className='hope' href="#home">
-          <img src={Logo} style={{height:40, width: 40, borderRadius:'50%'}} alt='logo'/>
+          <img src={Logo} style={{height:50, width: 50, borderRadius:'50%'}} alt='logo'/>
     
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -55,7 +55,7 @@ const NavBar = () => {
                 <a href='https://github.com/Hopejrajoku' target="_blank" rel="noopener noreferrer"><img src={GitHub} alt=''/></a>
                 <a href='https://www.linkedin.com/in/hope-ajoku-112599273/' target="_blank" rel="noopener noreferrer"><img src={LinkedIn} alt=''/></a>
             </div>
-            <a className='vvd' href={resume} download='resume'><span>My Résumé</span></a>
+            <a className='vvd' href={Hopejr_resume} download='Hopejr_resume'><span>My Résumé</span></a>
           </span>
         </Navbar.Collapse>
       </Container> 
