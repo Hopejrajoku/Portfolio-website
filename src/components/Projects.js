@@ -85,7 +85,7 @@ const Projects = () => {
                             </div>
                             <div className='proj-cardd-btn'>
                             <div style={{display: "flex", justifyContent: "center"}}>
-                            <a href='https://careerhelpai.vercel.app/' className='proj-button'>View Project</a>
+                            <a href='https://careerhelpai.vercel.app/' target="_blank" rel="noopener noreferrer" className='proj-button'>View Project</a>
                             </div>
                             </div>
                             </div>
