@@ -5,6 +5,7 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 import Care from '../assets/img/carechain.jpeg'
 import coincept1 from "../assets/img/coincep.jpeg";
 import comm from "../assets/img/Web.jpeg";
+import swtfyn from "../assets/img/swytfyn.jpeg";
 import TrackVisibility from 'react-on-screen';
 
 
@@ -86,6 +87,24 @@ const Projects = () => {
                             <div className='proj-cardd-btn'>
                             <div style={{display: "flex", justifyContent: "center"}}>
                             <a href='https://careerhelpai.vercel.app/' target="_blank" rel="noopener noreferrer" className='proj-button'>View Project</a>
+                            </div>
+                            </div>
+                            </div>
+                            </Col>
+
+
+                            <Col sm={6} md={4} className='project-cont'>
+                            <div className='proj-cardd'>
+                            <img src={swtfyn} alt='' style={{ marginTop: 40, height: "230px"}} />
+                            <div className='proj-cardd-txt'>
+                            <h4 className='title'>SwtFyn</h4>
+                            <div >
+                            <p>This project is an app that lets you participate in mock interview quizes, generate CV like a pro with the help of AI and many more.</p>
+                            </div>
+                            </div>
+                            <div className='proj-cardd-btn'>
+                            <div style={{display: "flex", justifyContent: "center"}}>
+                            <a href='https://swtfyn.vercel.app/' target="_blank" rel="noopener noreferrer" className='proj-button'>View Project</a>
                             </div>
                             </div>
                             </div>
