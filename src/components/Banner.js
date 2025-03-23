@@ -61,7 +61,7 @@ const Banner = () => {
                   <div classsName={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 
                     <h1 style={{ color: '#f5f5f4'}}>{`Hi! I'm Hope Jr, a`}<span className='wrap'></span> {text}</h1>
-                    <p>I am a dedicated Frontend Developer specializing in crafting visually captivating and functional web applications. Proficient in HTML, CSS, JavaScript, and React, I specialize in creating responsive, intuitive interfaces. With a passion for design and a commitment to innovation, I aim to exceed user expectations through collaborative, cutting-edge solutions.</p>
+                    <p>I am a dedicated Frontend Developer specializing in crafting visually captivating and functional web applications. Proficient in HTML, CSS, JavaScript, Nextjs and React, I specialize in creating responsive, intuitive interfaces. With a passion for design and a commitment to innovation, I aim to exceed user expectations through collaborative, cutting-edge solutions.</p>
                     
                   </div>
                   }
