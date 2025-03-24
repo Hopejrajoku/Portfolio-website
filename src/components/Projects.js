@@ -99,7 +99,7 @@ const Projects = () => {
                             <div className='proj-cardd-txt'>
                             <h4 className='title'>SwtFyn</h4>
                             <div >
-                            <p>Finance management app, that let users plan and keep track of their spending, save, budget accordingly, with automatic scanning feature with te help of AI </p>
+                            <p>A finance management app that helps users plan, track expenses, save, and budget effectively, featuring AI-powered automatic transaction scanning.</p>
                             </div>
                             </div>
                             <div className='proj-cardd-btn'>
