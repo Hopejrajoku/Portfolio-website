@@ -81,7 +81,7 @@ const Projects = () => {
                             <div className='proj-cardd-txt'>
                             <h4 className='title'>CareerelpAI</h4>
                             <div >
-                            <p>This project is an app that lets you participate in mock interview quizes, generate CV like a pro with the help of AI and many more.</p>
+                            <p>This app allows you to engage in mock interview quizzes, create professional-grade CVs with AI assistance, and access various other career-enhancing features.</p>
                             </div>
                             </div>
                             <div className='proj-cardd-btn'>
