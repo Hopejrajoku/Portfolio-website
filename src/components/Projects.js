@@ -63,7 +63,7 @@ const Projects = () => {
                             <img src={coincept1} alt='' style={{ marginTop: 40, height: "230px"}} />
                             <div className='proj-cardd-txt'>
                             <h4 className='title'>Crypto Price app</h4>
-                            <p>This is a very simple, easy to use Cryptocurrency price tracker app, built with React, ContextAPI, MaterialUI,Firebase and ChartJS</p>
+                            <p>This is a user-friendly cryptocurrency price tracker app built with React, Context API, Material UI, Firebase, and Chart.js.</p>
                             </div>
                             <div className='proj-cardd-btn'>
                             <div style={{display: "flex", justifyContent: "center"}}>
