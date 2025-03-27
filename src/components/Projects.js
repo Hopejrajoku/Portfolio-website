@@ -1,128 +1,87 @@
-import React from 'react'
-import { Col, Container, Row, Tab , Nav} from 'react-bootstrap';
-//import ProjectCard from './ProjectCard';
-import colorSharp2 from "../assets/img/color-sharp2.png";
-import Care from '../assets/img/carechain.jpeg'
-import coincept1 from "../assets/img/coincep.jpeg";
-import comm from "../assets/img/Web.jpeg";
-import swtfyn from "../assets/img/swytfyn.jpeg";
-import TrackVisibility from 'react-on-screen';
+import React from "react";
+import { Tilt } from "react-tilt";
+import { motion } from "framer-motion";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { projects } from "../constants";
+import { SectionWrapper } from "../hoc";
+import { fadeIn, textVariant } from "../utils/motion";
 
-
-
-const Projects = () => {
-
-  
-      
-
-
+const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
   return (
-    <section className='project' id='projects'>
-        <Container>
-            <Row>
-                <Col>
-                <TrackVisibility>
-                  {({ isVisible }) =>
-                  <div classsName={isVisible ? "animate__animated animate__bounce" : ""}>
-                <h2>Projects</h2>
-                <p>Here are the list of some of the projects I worked on in my one year as a self taught developer, I intend to gain more experince so I keep building.</p>
-                  </div>}
-                </TrackVisibility>
-                <Tab.Container id='projects-tab' defaultActiveKey="first">
-                <Nav variant="pills" className="nav-pills justify-content-center align-items-center" id="pills-tab">
-                 <Nav.Item>
-                   <Nav.Link eventKey="first">Web Design</Nav.Link>
-                 </Nav.Item>
-                 <Nav.Item>
-                   <Nav.Link eventKey="second">Mobile Design</Nav.Link>
-                 </Nav.Item>
-                </Nav>
-                <Tab.Content>
-                    <Tab.Pane eventKey="first">
-                        <Row className='Poject-row'>
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+      <Tilt
+        options={{
+          max: 45,
+          scale: 1,
+          speed: 450,
+        }}
+        className="d-block"
+      >
+        <Card className="shadow-lg border-0 rounded-3 overflow-hidden" >
+          <div className="position-relative w-100" style={{ height: "230px" }} >
+            <Card.Img
+              src={image}
+              alt={name}
+              className="w-100 h-100 object-fit rounded-top"
+              style={{ borderRadius: "1rem 1rem 0rem 0rem" }}
+            />
+          </div>
 
+          <Card.Body>
+            <Card.Title className="fw-bold">{name}</Card.Title>
+            <Card.Text className="text-muted">{description}</Card.Text>
 
-                        <Col sm={6} md={4} className='project-cont'>
-                            <div className='proj-cardd'>
-                            <img src={Care} alt='' style={{ marginTop: 40, height: "230px"}} />
-                            <div className='proj-cardd-txt'>
-                            <h4 className='title'>Carechain</h4>
-                            <p>This is a Biomedic blockchain project, designed to improve lives with the help of blockchain tech and AI. Built with React.js</p>
-                            </div>
-                            <div className='proj-cardd-btn'  >
-                            <div style={{display: "flex", justifyContent: "center"}}>
-                              <a href='https://carechain.vercel.app/' target="_blank" rel="noopener noreferrer" className='proj-button'>View Project</a>
-                            </div>
-                            </div>
-                            </div>
-                            </Col>
+            <div className="d-flex flex-wrap gap-2">
+              {tags.map((tag) => (
+                <span key={`${name}-${tag.name}`} className={`badge ${tag.color}`}>
+                  #{tag.name}
+                </span>
+              ))}
+            </div>
 
+            <Button 
+              href={source_code_link} 
+              target="_blank" 
+              variant="primary" 
+              className="mt-3 w-100"
+            >
+              View Source Code
+            </Button>
+          </Card.Body>
+        </Card>
+      </Tilt>
+    </motion.div>
+  );
+};
 
-                            <Col sm={6} md={4}>
-                            <div className='proj-cardd'>
-                            <img src={coincept1} alt='' style={{ marginTop: 40, height: "230px"}} />
-                            <div className='proj-cardd-txt'>
-                            <h4 className='title'>Crypto Price app</h4>
-                            <p>This is a user-friendly cryptocurrency price tracker app built with React, Context API, Material UI, Firebase, and Chart.js.</p>
-                            </div>
-                            <div className='proj-cardd-btn'>
-                            <div style={{display: "flex", justifyContent: "center"}}>
-                            <a href='https://coincept.netlify.app/' target="_blank" rel="noopener noreferrer" className='proj-button' role='button'>View Project</a>
-                            </div>
-                            </div>
-                            </div>
-                            </Col>
+const Works = () => {
+  return (
+    <Container className="py-5">
+      <motion.div variants={textVariant()}>
+        <p className="text-muted fs-5">My Work</p>
+        <h2 className="fw-bold">Projects</h2>
+      </motion.div>
 
-                            
+      <Row className="mt-3">
+        <Col md={10} lg={8} className="mx-auto">
+          <motion.p 
+            variants={fadeIn("", "", 0.1, 1)} 
+            className="text-muted fs-6"
+          >
+            Following projects showcase my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.
+          </motion.p>
+        </Col>
+      </Row>
 
-                            <Col sm={6} md={4} className='project-cont'>
-                            <div className='proj-cardd'>
-                            <img src={comm} alt='' style={{ marginTop: 40, height: "230px"}} />
-                            <div className='proj-cardd-txt'>
-                            <h4 className='title'>CareerelpAI</h4>
-                            <div >
-                            <p>This app allows you to engage in mock interview quizzes, create professional-grade CVs with AI assistance, and access various other career-enhancing features.</p>
-                            </div>
-                            </div>
-                            <div className='proj-cardd-btn'>
-                            <div style={{display: "flex", justifyContent: "center"}}>
-                            <a href='https://careerhelpai.vercel.app/' target="_blank" rel="noopener noreferrer" className='proj-button'>View Project</a>
-                            </div>
-                            </div>
-                            </div>
-                            </Col>
+      <Row className="mt-5 g-4">
+        {projects.map((project, index) => (
+          <Col key={index} md={6} lg={4}>
+            <ProjectCard index={index} {...project} />
+          </Col>
+        ))}
+      </Row>
+    </Container>
+  );
+};
 
-
-                            <Col sm={6} md={4} className='project-cont'>
-                            <div className='proj-cardd'>
-                            <img src={swtfyn} alt='' style={{ marginTop: 40, height: "230px"}} />
-                            <div className='proj-cardd-txt'>
-                            <h4 className='title'>SwtFyn</h4>
-                            <div >
-                            <p>A finance management app that helps users plan, track expenses, save, and budget effectively, featuring AI-powered automatic transaction scanning.</p>
-                            </div>
-                            </div>
-                            <div className='proj-cardd-btn'>
-                            <div style={{display: "flex", justifyContent: "center"}}>
-                            <a href='https://swtfyn.vercel.app/' target="_blank" rel="noopener noreferrer" className='proj-button'>View Project</a>
-                            </div>
-                            </div>
-                            </div>
-                            </Col>
-
-                            
-                            
-                        </Row>
-                    </Tab.Pane>
-                    
-                </Tab.Content>
-                </Tab.Container>
-                </Col>
-            </Row>
-        </Container>
-        <img className='background-image-right' src={colorSharp2} alt='' />
-    </section>
-  )
-}
-
-export default Projects
+export default SectionWrapper(Works, "");
