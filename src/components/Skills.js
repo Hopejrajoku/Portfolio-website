@@ -1,99 +1,44 @@
-import React from 'react';
+import React from 'react'; 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Col, Container, Row } from 'react-bootstrap';
-import Github2 from "../assets/img/Github2.svg";
-import Figma from "../assets/img/Figma.svg";
-import Css from "../assets/img/CSS3.png";
-import django from "../assets/img/django.svg";
-import firebase from "../assets/img/firebase.svg";
-import Html from "../assets/img/html5.png";
-import Javascript from "../assets/img/js.jpeg";
-import Reactjs from "../assets/img/Reactjs.svg";
 import colorSharp from "../assets/img/color-sharp.png";
+import { skills } from '../constants';
+
 
 const Skills = () => {
-
     const responsive = {
-        superLargeDesktop: {
-            // the naming can be any, depends on you.
-            breakpoint: { max: 4000, min: 3000 },
-            items: 5
-          },
-          desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3
-          },
-          tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2
-          },
-          mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1
-          }
+        superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 5 },
+        desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
+        tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
+        mobile: { breakpoint: { max: 464, min: 0 }, items: 1 }
     };
 
+    
 
-
-  return (
-    <section className='skill' id='skills'>
-        <Container>
-            <Row>
-                <Col>
-                <div className='skill-bx'>
-                    <h2>Skills</h2>
-                    <p>Here are the skills I have learned and still learning</p>
-                    <Carousel responsive={responsive} infinite={true} className='skill-slider'>
-
-                        <div className='item'>
-                            <img src={Html} alt=''/>
-                            <h5>HTML</h5>
+    return (
+        <section className="skill" id="skills">
+            <Container>
+                <Row>
+                    <Col className="text-center">
+                        <div className="skill-bx p-6">
+                            <h2 className="mb-3">Skills</h2>
+                            <p className="mb-4">These are the skills I have mastered and continue to refine.</p>
+                            <Carousel responsive={responsive} infinite={true} autoPlay={true} className="skill-slider">
+                                {skills.map((skill, index) => (
+                                    <div key={index} className="item text-center">
+                                        <img src={skill.img} alt={skill.name} className="img-fluid mx-auto d-block" style={{ height: "80px" }} />
+                                        <h5 className="mt-2">{skill.name}</h5>
+                                    </div>
+                                ))}
+                            </Carousel>
                         </div>
+                    </Col>
+                </Row>
+            </Container>
+            <img className="background-image-left" src={colorSharp} alt="" style={{ width: "100%", opacity: 0.1 }} />
+        </section>
+    );
+};
 
-                        <div className='item'>
-                            <img src={Css} alt=''/>
-                            <h5>CSS</h5>
-                        </div>
-
-                        <div className='item'>
-                            <img src={Javascript} alt=''/>
-                            <h5>Javascript</h5>
-                        </div>
-
-                        <div className='item'>
-                            <img src={Reactjs} alt=''/>
-                            <h5>React.js</h5>
-                        </div>
-
-
-                        <div className='item'>
-                            <img src={django} alt=''/>
-                            <h5>Django</h5>
-                        </div>
-
-                        <div className='item'>
-                            <img src={firebase} alt=''/>
-                            <h5>Firebase</h5>
-                        </div>
-
-                        <div className='item'>
-                            <img src={Figma} alt=''/>
-                            <h5>Figma</h5>
-                        </div>
-
-                        <div className='item'>
-                            <img src={Github2} alt=''/>
-                            <h5>GitHub</h5>
-                        </div>
-                    </Carousel>
-                </div>
-                </Col>
-            </Row>
-        </Container>
-        <img className='background-image-left' src={colorSharp} alt=''/>
-    </section>
-  )
-}
-
-export default Skills
+export default Skills;

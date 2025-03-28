@@ -3,8 +3,30 @@ import {
     coincep,
     swytfyn,
     web,
+    Github2,
+    Figma,
+    Css,
+    django,
+    firebase,
+    Html,
+    Javascript,
+    Reactjs,
+    nextjs,
+    tailwind,
   } from "../assets/img";
   
+  const skills = [
+          { img: Javascript, name: "Javascript" },
+          { img: Reactjs, name: "React.js" },
+          { img: nextjs, name: "Next.js" },
+          { img: tailwind, name: "Tailwind CSS" },
+          { img: Html, name: "HTML" },
+          { img: Css, name: "CSS" },
+          { img: django, name: "Django" },
+          { img: firebase, name: "Firebase" },
+          { img: Figma, name: "Figma" },
+          { img: Github2, name: "GitHub" }
+      ];
   
   const projects = [
     {
@@ -107,4 +129,4 @@ import {
     },
   ];
   
-  export { projects };
+  export { skills, projects };
