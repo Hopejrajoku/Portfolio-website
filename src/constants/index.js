@@ -1,10 +1,37 @@
 import {
     carechain,
-    coincep
+    coincep,
+    swytfyn,
+    web,
   } from "../assets/img";
   
   
   const projects = [
+    {
+      name: "SwtFyn",
+      description:
+        "Carechain is a revolutionary crypto (Web3) medical product that leverages the power of biometric data and AI to provide accurate diagnosis of health condition.",
+      tags: [
+        {
+          name: "Nextjs",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Tailwindcss",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Shadcn",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Supabase",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: swytfyn,
+      source_code_link: "https://swtfyn.vercel.app/",
+    },
     {
       name: "Carechain",
       description:
@@ -25,6 +52,31 @@ import {
       ],
       image: carechain,
       source_code_link: "https://carechain.vercel.app/",
+    },
+    {
+      name: "CareerhelpAI",
+      description:
+        "Carechain is a revolutionary crypto (Web3) medical product that leverages the power of biometric data and AI to provide accurate diagnosis of health condition.",
+      tags: [
+        {
+          name: "Nextjs",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Tailwindcss",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Shadcn",
+          color: "pink-text-gradient",
+        },        
+        {
+          name: "Neon",
+          color: "pink-text-gradient",
+        }
+      ],
+      image: web,
+      source_code_link: "https://careerhelpai.vercel.app/",
     },
     
     {

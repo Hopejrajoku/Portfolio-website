@@ -441,7 +441,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
 }
 
-.proj-cardd-btn{
+.btn{
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0px;
   text-align: center;
