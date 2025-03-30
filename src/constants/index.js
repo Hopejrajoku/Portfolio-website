@@ -39,7 +39,7 @@ import {
           color: "blue-text-gradient",
         },
         {
-          name: "Tailwindcss",
+          name: "Tailwind",
           color: "green-text-gradient",
         },
         {
@@ -47,7 +47,7 @@ import {
           color: "pink-text-gradient",
         },
         {
-          name: "Supabase",
+          name: "Prisma",
           color: "pink-text-gradient",
         },
       ],
@@ -104,7 +104,7 @@ import {
     {
       name: "Coincept",
       description:
-        "A cryptocurrency tracker web application that keeps track of coin prices in real time, users can create an account and add their favorite coinst to watchlist.",
+        "A cryptocurrency tracker application that keeps track of coin prices in real time, users can add their favorite coins to watchlist.",
       tags: [
         {
           name: "react",
