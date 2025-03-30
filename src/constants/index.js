@@ -32,7 +32,7 @@ import {
     {
       name: "SwtFyn",
       description:
-        "Carechain is a revolutionary crypto (Web3) medical product that leverages the power of biometric data and AI to provide accurate diagnosis of health condition.",
+        "SwtFyn is a finance app that helps users track income and expenses, set budgets, and achieve financial goals, and also has AI-powered scanner feature.",
       tags: [
         {
           name: "Nextjs",
@@ -78,7 +78,7 @@ import {
     {
       name: "CareerhelpAI",
       description:
-        "Carechain is a revolutionary crypto (Web3) medical product that leverages the power of biometric data and AI to provide accurate diagnosis of health condition.",
+        "CareerhelpAI is a platform that connects job seekers with AI-powered career assistance, providing personalized job recommendations and interview preparation.",
       tags: [
         {
           name: "Nextjs",
