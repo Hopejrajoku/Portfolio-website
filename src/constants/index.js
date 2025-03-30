@@ -78,7 +78,7 @@ import {
     {
       name: "CareerhelpAI",
       description:
-        "CareerhelpAI is a platform that connects job seekers with AI-powered career assistance, providing personalized job recommendations and interview preparation.",
+        "CareerhelpAI is a platform that connects job seekers with AI-powered career assistance, providing personalized CV creation and interview preparation.",
       tags: [
         {
           name: "Nextjs",
