@@ -24,7 +24,15 @@ const Skills = () => {
                         <div className="skill-bx p-6">
                             <h2 className="mb-3">Skills</h2>
                             <p className="mb-4">These are the skills I have mastered and continue to refine.</p>
-                            <Carousel responsive={responsive} infinite={true} autoPlay={true} className="skill-slider">
+                            <Carousel 
+                            responsive={responsive} 
+                            infinite={true} 
+                            autoPlay={true}  
+                            className="skill-slider"
+                            renderButtonGroupOutside={false} 
+                            arrow={false}
+
+                            >   
                                 {skills.map((skill, index) => (
                                     <div key={index} className="item text-center">
                                         <img src={skill.img} alt={skill.name} className="img-fluid mx-auto d-block" style={{ height: "80px" }} />
