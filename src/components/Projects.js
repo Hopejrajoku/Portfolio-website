@@ -82,7 +82,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 
 const Works = () => {
   return (
-    <Container id="projects" className="py-5">v
+    <Container id="projects" className="py-5">
       <motion.div variants={textVariant()}>        
         <h2 className="fw-bold">Projects</h2>
       </motion.div>

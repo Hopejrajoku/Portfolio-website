@@ -5,7 +5,6 @@ import { Col, Container, Row } from 'react-bootstrap';
 import colorSharp from "../assets/img/color-sharp.png";
 import { skills } from '../constants';
 
-
 const Skills = () => {
     const responsive = {
         superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 5 },
@@ -13,8 +12,6 @@ const Skills = () => {
         tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
         mobile: { breakpoint: { max: 464, min: 0 }, items: 1 }
     };
-
-    
 
     return (
         <section className="skill" id="skills">
@@ -29,9 +26,6 @@ const Skills = () => {
                             infinite={true} 
                             autoPlay={true}  
                             className="skill-slider"
-                            renderButtonGroupOutside={false} 
-                            arrow={false}
-
                             >   
                                 {skills.map((skill, index) => (
                                     <div key={index} className="item text-center">
