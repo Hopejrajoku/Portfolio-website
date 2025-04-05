@@ -1,44 +1,54 @@
-import React from 'react'; 
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import { Col, Container, Row } from 'react-bootstrap';
+import React from 'react';
+import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import colorSharp from "../assets/img/color-sharp.png";
 import { skills } from '../constants';
 
 const Skills = () => {
-    const responsive = {
-        superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 5 },
-        desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
-        tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
-        mobile: { breakpoint: { max: 464, min: 0 }, items: 1 }
-    };
-
     return (
-        <section className="skill" id="skills">
+        <section className="skill" id="skills" >
             <Container>
-                <Row>
-                    <Col className="text-center">
-                        <div className="skill-bx p-6">
-                            <h2 className="mb-3">Skills</h2>
-                            <p className="mb-4">These are the skills I have mastered and continue to refine.</p>
-                            <Carousel 
-                            responsive={responsive} 
-                            infinite={true} 
-                            autoPlay={true}  
-                            className="skill-slider"
-                            >   
-                                {skills.map((skill, index) => (
-                                    <div key={index} className="item text-center">
-                                        <img src={skill.img} alt={skill.name} className="img-fluid mx-auto d-block" style={{ height: "80px" }} />
-                                        <h5 className="mt-2">{skill.name}</h5>
+                <Row className="justify-content-center">
+                    <Col lg={10} className="text-center">
+                    <div className="skill-bx p-6">
+                        <h2 className="mb-3">Skills</h2>
+                        <p className="mb-4 ">
+                            These are the skills I have learned and continue to improve on.
+                        </p>
+                        <Carousel 
+                            indicators={false} 
+                            controls={false} 
+                            interval={2000} 
+                            fade={true} 
+                            pause={false}
+                            touch={true}
+                            className="custom-carousel"
+                        >
+                            {skills.map((skill, index) => (
+                                <Carousel.Item key={index}>
+                                    <div className="d-flex flex-column align-items-center">
+                                        <img 
+                                            src={skill.img} 
+                                            alt={skill.name} 
+                                            className="img-fluid mb-3" 
+                                            style={{ height: "100px", objectFit: "contain" }} 
+                                        />
+                                        <h5>{skill.name}</h5>
                                     </div>
-                                ))}
-                            </Carousel>
-                        </div>
+                                </Carousel.Item>
+                            ))}
+                        </Carousel>
+                    </div>
                     </Col>
                 </Row>
             </Container>
-            <img className="background-image-left" src={colorSharp} alt="" style={{ width: "100%", opacity: 0.1 }} />
+
+            {/* Background Image (decorative) */}
+            <img 
+                className="position-absolute start-0 top-0 w-100 opacity-10" 
+                src={colorSharp} 
+                alt="decorative background" 
+                style={{ zIndex: -11 }} 
+            />
         </section>
     );
 };
