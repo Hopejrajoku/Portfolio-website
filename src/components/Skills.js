@@ -44,7 +44,7 @@ const Skills = () => {
 
             {/* Background Image (decorative) */}
             <img 
-                className="position-absolute start-0 top-0 w-100 opacity-10" 
+                className="position-absolute start-0 w-50 opacity-2" 
                 src={colorSharp} 
                 alt="decorative background" 
                 style={{ zIndex: -11 }} 
