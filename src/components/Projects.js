@@ -35,7 +35,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         className="d-block"
       >
         <Card className="shadow-lg border-0 rounded-3 overflow-hidden h-100 d-flex flex-column" >
-          <div className="position-relative w-100" style={{ height: "230px" }} >
+          <div className="position-relative w-100">
             <Card.Img
               src={image}
               alt={name}
@@ -60,7 +60,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
             style={{ color: "#eceaea", fontWeight: "400" }}
             >{description}</Card.Text>
 
-            <div className="d-flex flex-wrap gap-2 text-[#eceaea]">
+            <div className="d-flex flex-wrap text-[#eceaea]">
               {tags.map((tag) => (
                 <span key={`${name}-${tag.name}`} className={`badge ${tag.color}`} style={{ color: "#eceaea" }}>
                   #{tag.name}
