@@ -45,11 +45,11 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
           </div>
 
           <Card.Body
-          className="d-flex flex-column justify-content-between h-50"
-          style={{ 
-            backgroundColor: "#121212", 
+          className="d-flex flex-column justify-content-between"
+          style={{
+            backgroundColor: "#121212",
             border: "1px solid rgba(236, 234, 234, 0.08)",
-            flexGrow: 1
+            minHeight: "280px", // Adjust as needed
           }}
           >
 
