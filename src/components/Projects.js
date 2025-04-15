@@ -35,7 +35,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         className="d-block"
       >
         <Card className="shadow-lg border-0 rounded-3 overflow-hidden h-100 d-flex flex-column" >
-          <div className="position-relative w-100">
+          <div className="position-relative w-100" style={{ height: "230px" }} >
             <Card.Img
               src={image}
               alt={name}
@@ -45,7 +45,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
           </div>
 
           <Card.Body
-          className="d-flex flex-column justify-content-between"
+          className="d-flex flex-column justify-content-between h-50"
           style={{ 
             backgroundColor: "#121212", 
             border: "1px solid rgba(236, 234, 234, 0.08)",
