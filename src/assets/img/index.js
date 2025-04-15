@@ -12,6 +12,7 @@ import Javascript from "./js.jpeg";
 import Reactjs from "./Reactjs.svg";
 import nextjs from "./nextjs.png";
 import tailwind from "./tailwind.png";
+import bird from "./bird.jpeg";
 
 export {  
   carechain,
@@ -25,6 +26,7 @@ export {
   firebase,
   Html,
   Javascript,
+  bird,
   Reactjs,
   nextjs,
   tailwind,

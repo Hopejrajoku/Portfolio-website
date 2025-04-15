@@ -5,6 +5,7 @@ import {
     web,
     Github2,
     Figma,
+    bird,
     Css,
     django,
     firebase,
@@ -127,6 +128,32 @@ import {
       image: coincep,
       source_code_link: "https://coincept.vercel.app/",
     },
+    {
+      name: "Bird",
+      description:
+        "Designed and buil birdwatching app that helps users identify and learn about different bird species.",
+      tags: [
+        {
+          name: "Nextjs",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Tailwind",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Shadcn",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Supabase",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: bird,
+      source_code_link: "https://plumaai.vercel.app/",
+    },
   ];
+  
   
   export { skills, projects };
