@@ -57,7 +57,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
             style={{ color: "#eceaea" }}
              >{name}</Card.Title>
             <Card.Text 
-            style={{ color: "#eceaea" }}
+            style={{ color: "#eceaea", fontWeight: "400" }}
             >{description}</Card.Text>
 
             <div className="d-flex flex-wrap gap-2 text-[#eceaea]">
