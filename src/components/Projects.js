@@ -35,7 +35,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         className="d-block"
       >
         <Card className="shadow-lg border-0 rounded-3 overflow-hidden h-100 d-flex flex-column" >
-          <div className="position-relative w-100" style={{ height: "230px" }} >
+          <div className="position-relative w-100">
             <Card.Img
               src={image}
               alt={name}
