@@ -116,8 +116,8 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "scss",
-          color: "pink-text-gradient",
+          name: "Scss",
+          color: "green-text-gradient",
         },
         {
           name: "firebase",
@@ -126,7 +126,7 @@ import {
         
       ],
       image: coincep,
-      source_code_link: "https://coincept.vercel.app/",
+      source_code_link: "https://coincept.netlify.app/",
     },
     {
       name: "Bird",

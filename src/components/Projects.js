@@ -34,8 +34,8 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         }}
         className="d-block"
       >
-        <Container className="p-3">
-        <Card className="shadow-lg border-0 rounded-3 overflow-hidden" >
+        
+        <Card className="shadow-lg border-0 rounded-3 overflow-hidden h-100 d-flex flex-column" >
           <div className="position-relative w-100" style={{ height: "230px" }} >
             <Card.Img
               src={image}
@@ -46,16 +46,24 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
           </div>
 
           <Card.Body
-            style={{ backgroundColor: "#121212", border: "1px solid rgba(236, 234, 234, 0.08)"}}
-          >
-            <Card.Title className="fw-bold fs-5"
+            className=" justify-content-between d-flex flex-column"
+            style={{ 
+              backgroundColor: "#121212", 
+              border: "1px solid rgba(236, 234, 234, 0.08)" 
+            }}>
+            <Card.Title className="fs-5"
             style={{ color: "#eceaea" }}
              >{name}</Card.Title>
             <Card.Text 
-            style={{ color: "#eceaea" }}
+            style={{ 
+            color: "#eceaea",
+            fontSize: "0.6rem",   // smaller font size
+            fontWeight: "600"     // normal/light weight
+            }}
             >{description}</Card.Text>
 
-            <div className="d-flex flex-wrap gap-2 text-[#eceaea]">
+            <div className="d-flex flex-wrap gap-1 text-[#eceaea]"
+            style={{ fontSize: "0.7rem", fontWeight: "300" }}>
               {tags.map((tag) => (
                 <span key={`${name}-${tag.name}`} className={`badge ${tag.color}`} style={{ color: "#eceaea" }}>
                   #{tag.name}
@@ -76,7 +84,6 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
             </Button>
           </Card.Body>
         </Card>
-        </Container>
       </Tilt>
     </motion.div>
   );
@@ -100,9 +107,9 @@ const Works = () => {
         </Col>
       </Row>
 
-      <Row className="mt-5 g-4">
+      <Row className="mt-5 g-4 container mx-auto h-[30%]">
         {projects.map((project, index) => (
-          <Col key={index} md={6} lg={4}>
+          <Col key={index} md={6} lg={4} className="d-flex">
             <ProjectCard index={index} {...project} />
           </Col>
         ))}
