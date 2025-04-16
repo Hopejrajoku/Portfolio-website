@@ -75,7 +75,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
               href={source_code_link} 
               target="_blank" 
               variant="primary" 
-              className="mt-3 w-100"
+              className="mt-2 w-100"
               style={buttonStyle}
               onMouseEnter={(e) => Object.assign(e.target.style, buttonHoverStyle)}
               onMouseLeave={(e) => Object.assign(e.target.style, buttonStyle)}  
