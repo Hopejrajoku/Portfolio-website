@@ -34,8 +34,9 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         }}
         className="d-block"
       >
-        <Card className="shadow-lg border-0 rounded-3 overflow-hidden h-100 d-flex flex-column" >
-          <div className="position-relative w-100">
+        <Card className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-4 mx-auto p-4 rounded"
+          style={{ maxWidth: "80rem" }}>
+          <div className="position-relative w-100" style={{ height: "230px" }} >
             <Card.Img
               src={image}
               alt={name}
@@ -45,22 +46,16 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
           </div>
 
           <Card.Body
-          className="d-flex flex-column justify-content-between"
-          style={{
-            backgroundColor: "#121212",
-            border: "1px solid rgba(236, 234, 234, 0.08)",
-            minHeight: "280px", // Adjust as needed
-          }}
+            style={{ backgroundColor: "#121212", border: "1px solid rgba(236, 234, 234, 0.08)"}}
           >
-
             <Card.Title className="fw-bold fs-5"
             style={{ color: "#eceaea" }}
              >{name}</Card.Title>
             <Card.Text 
-            style={{ color: "#eceaea", fontWeight: "400" }}
+            style={{ color: "#eceaea" }}
             >{description}</Card.Text>
 
-            <div className="d-flex flex-wrap text-[#eceaea]">
+            <div className="d-flex flex-wrap gap-2 text-[#eceaea]">
               {tags.map((tag) => (
                 <span key={`${name}-${tag.name}`} className={`badge ${tag.color}`} style={{ color: "#eceaea" }}>
                   #{tag.name}
