@@ -131,7 +131,7 @@ import {
     {
       name: "Bird",
       description:
-        "Designed and buil birdwatching app that helps users identify and learn about different bird species.",
+        "Designed and built the UI of a birdwatching app that helps users identify and learn about different bird species.",
       tags: [
         {
           name: "Nextjs",
