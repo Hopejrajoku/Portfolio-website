@@ -34,8 +34,8 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         }}
         className="d-block"
       >
-        <Card className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-4 mx-auto p-4 rounded"
-          style={{ maxWidth: "80rem" }}>
+        <Container className="p-3">
+        <Card className="shadow-lg border-0 rounded-3 overflow-hidden" >
           <div className="position-relative w-100" style={{ height: "230px" }} >
             <Card.Img
               src={image}
@@ -76,6 +76,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
             </Button>
           </Card.Body>
         </Card>
+        </Container>
       </Tilt>
     </motion.div>
   );
