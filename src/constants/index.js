@@ -1,6 +1,7 @@
 import {
     carechain,
     coincep,
+    ajoku,
     swytfyn,
     web,
     Github2,
@@ -30,6 +31,31 @@ import {
       ];
   
   const projects = [
+    {
+      name: "Ajoku",
+      description:
+        "Ajoku is a fast-growing service marketplace platform that connects people with trusted professionals for essential services like cleaning, laundry, home repairs, errands, etc.",
+      tags: [
+        {
+          name: "Nextjs",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Tailwind",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Shadcn",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Hygraph",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: ajoku,
+      source_code_link: "https://www.ajoku.ng/",
+    },
     {
       name: "SwtFyn",
       description:
