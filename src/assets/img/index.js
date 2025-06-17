@@ -13,9 +13,11 @@ import Reactjs from "./Reactjs.svg";
 import nextjs from "./nextjs.png";
 import tailwind from "./tailwind.png";
 import bird from "./bird.jpeg";
+import ajoku from "./ajoku.jpeg"
 
 export {  
   carechain,
+  ajoku,
   coincep,
   swytfyn,
   web,
